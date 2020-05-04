@@ -18,14 +18,13 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: root
     ports:
-      - "3306:3306"
-
-  web:
-    build: .
+      - 3308:3308
+  web2:
+    build: ./server
     command: rails s -p 3000 -b '0.0.0.0'
     volumes:
-      - .server:/app_name
+      - ./server:/app_name
     ports:
-      - "3000:3000"
+      - 3000:3000
     links:
       - db

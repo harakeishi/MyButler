@@ -1,0 +1,40 @@
+# サーバー部
+
+server/.bundle
+
+server/log/*
+server/tmp/*
+server/!/log/.keep
+server/!/tmp/.keep
+
+server/storage/*
+server/!/storage/.keep
+
+server/node_modules
+server/yarn-error.log
+
+server/public/assets
+server/.byebug_history
+
+server/config/master.key
+
+# フロント部
+front/mybutler/.DS_Store
+front/mybutler/node_modules
+front/mybutler/dist
+front/mybutler/.env.local
+front/mybutler/.env.*.local
+
+# Log files
+front/mybutler/npm-debug.log*
+front/mybutler/yarn-debug.log*
+front/mybutler/yarn-error.log*
+
+# Editor directories and files
+front/mybutler/.idea
+front/mybutler/.vscode
+front/mybutler/*.suo
+front/mybutler/*.ntvs*
+front/mybutler/*.njsproj
+front/mybutler/*.sln
+front/mybutler/*.sw?
