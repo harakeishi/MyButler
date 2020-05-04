@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+rm -f /app/tmp/pids/server.pid
+sudo docker-compose build
+docker-compose up -d

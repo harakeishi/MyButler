@@ -9,22 +9,24 @@ services:
     privileged: true
     volumes:
       - ./front:/app
+    links:
+      - rails
     tty: true
     stdin_open: true
-    command: /bin/sh
+    command:  "npm run serve"
   db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
-    ports:
-      - 3308:3308
-  web2:
-    build: ./server
-    command: rails s -p 3000 -b '0.0.0.0'
+      image: postgres
+      environment:
+        POSTGRES_HOST_AUTH_METHOD: 'trust'
+        POSTGRES_PASSWORD: 'postgres'
+      volumes:
+        - ./server/tmp/db:/var/lib/postgresql/data
+  rails:
+    build: ./server/.
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - ./server:/app_name
+      - ./server:/myapp
     ports:
-      - 3000:3000
+      - "3000:3000"
     links:
       - db

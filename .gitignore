@@ -19,22 +19,24 @@ server/.byebug_history
 server/config/master.key
 
 # フロント部
-front/mybutler/.DS_Store
-front/mybutler/node_modules
-front/mybutler/dist
-front/mybutler/.env.local
-front/mybutler/.env.*.local
+front/.DS_Store
+front/node_modules
+front/dist
+
+# local env files
+front/.env.local
+front/.env.*.local
 
 # Log files
-front/mybutler/npm-debug.log*
-front/mybutler/yarn-debug.log*
-front/mybutler/yarn-error.log*
+front/npm-debug.log*
+front/yarn-debug.log*
+front/yarn-error.log*
 
 # Editor directories and files
-front/mybutler/.idea
-front/mybutler/.vscode
-front/mybutler/*.suo
-front/mybutler/*.ntvs*
-front/mybutler/*.njsproj
-front/mybutler/*.sln
-front/mybutler/*.sw?
+front/.idea
+front/.vscode
+front/*.suo
+front/*.ntvs*
+front/*.njsproj
+front/*.sln
+front/*.sw?
