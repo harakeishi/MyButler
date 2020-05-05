@@ -41,9 +41,18 @@ export default {
       })
         .then((response) => {
           this.$store.dispatch('doRegistrationToken', response.data)
+          this.$notify({
+            title: 'Success',
+            message: 'ログインに成功しました！',
+            type: 'success'
+          })
         })
         .catch((e) => {
           console.log(e)
+          this.$notify.error({
+            title: 'Error',
+            message: 'ログインに失敗しました。'
+          })
         })
     }
   }

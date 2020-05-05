@@ -9,7 +9,7 @@
         </span>
         <span v-else>
           <li><router-link to="/login">検索</router-link></li>
-          <li><router-link to="/about">マイページ</router-link></li>
+          <li><a @click="dologout">ログアウト</a></li>
         </span>
       </ul>
     </div>
@@ -18,7 +18,12 @@
 
 <script>
 export default {
-  name: 'appheadder'
+  name: 'appheadder',
+  methods: {
+    dologout () {
+      this.$store.dispatch('doRegistrationToken', null)
+    }
+  }
 }
 </script>
 
