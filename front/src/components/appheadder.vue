@@ -21,7 +21,7 @@ export default {
   name: 'appheadder',
   methods: {
     dologout () {
-      this.$store.dispatch('doRegistrationToken', null)
+      this.$store.dispatch('doRegistrationToken', '')
       this.$router.push('/')
     }
   }
