@@ -1,15 +1,15 @@
 <template>
   <div class="appheadder">
-    <router-link to="/" class="title">プロジェクト名</router-link>
+    <router-link to="/" class="title">私の執事</router-link>
     <div class="menu">
       <ul id="nav">
-        <span v-if="!$store.state.token">
-          <li><router-link to="/login">ログイン</router-link></li>
-          <li><router-link to="/signup">新規登録</router-link></li>
+        <span v-if="!$store.state.userinfo.token">
+          <router-link to="/login"><li>ログイン</li></router-link>
+          <router-link to="/signup"><li>新規登録</li></router-link>
         </span>
         <span v-else>
-          <li><router-link to="/login">検索</router-link></li>
-          <li><a @click="dologout">ログアウト</a></li>
+          <router-link to="/search"><li>検索</li></router-link>
+          <a @click="dologout"><li>ログアウト</li></a>
         </span>
       </ul>
     </div>
@@ -22,6 +22,7 @@ export default {
   methods: {
     dologout () {
       this.$store.dispatch('doRegistrationToken', null)
+      this.$router.push('/')
     }
   }
 }
@@ -65,7 +66,7 @@ export default {
   margin-right: 2px;
 }
 
-#nav li a {
+#nav li {
   text-decoration: none;
   color: #fff;
   font-weight: bold;

@@ -5,16 +5,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    token: ''
+    userinfo: '',
+    acquser: ''
   },
   mutations: {
     RegistrationToken (state, payload) {
-      state.token = payload.token
+      state.userinfo = payload.userinfo
+    },
+    RegistrationAcqUser (state, payload) {
+      state.acquser = payload.acquserinfo
     }
   },
   actions: {
-    doRegistrationToken ({ commit }, token) {
-      commit('RegistrationToken', { token })
+    doRegistrationToken ({ commit }, userinfo) {
+      commit('RegistrationToken', { userinfo })
+    },
+    doRegistrationAcqUser ({ commit }, acquserinfo) {
+      commit('RegistrationAcqUser', { acquserinfo })
     }
   },
   modules: {

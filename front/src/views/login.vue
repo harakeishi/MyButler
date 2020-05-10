@@ -46,6 +46,7 @@ export default {
             message: 'ログインに成功しました！',
             type: 'success'
           })
+          this.$router.push('/search')
         })
         .catch((e) => {
           console.log(e)

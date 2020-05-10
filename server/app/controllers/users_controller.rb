@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def sign_in
     login_user = User.find_by(name:params[:name],pwd:params[:pwd])
     if login_user != nil
-      render plain: login_user.token
+      render json: {id: login_user.id, name: login_user.name, token: login_user.token}
     else
       render json: { errors: ['ログインに失敗しました'] }, status: 401
     end
