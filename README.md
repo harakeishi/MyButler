@@ -6,7 +6,10 @@
 ## □ 開発環境の立ち上げ方
 
 ```bash:bash
-$ bin/serve
+$sh bin/serve
+$docker-compose run rails rake db:create
+$docker-compose run web npm install
+$docker-compose run web npm run serve
 ```
 ## □ 開発手順
 - フロント部
