@@ -6,7 +6,7 @@
 ## □ 開発環境の立ち上げ方
 
 ```bash:bash
-$ bin/serve
+$ sh bin/serve
 ```
 ## □ 開発手順
 - フロント部
