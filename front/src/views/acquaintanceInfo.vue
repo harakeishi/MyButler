@@ -26,7 +26,7 @@
     <el-dialog
       title="Storyを追加する"
       :visible.sync="dialogVisible"
-      width="30%">
+      width="80%">
       <div class="block">
         <el-date-picker
           v-model="story.date"
@@ -138,7 +138,7 @@ export default {
     background-color: rgb(184, 255, 238);
   }
   .timeline{
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
   }
 </style>

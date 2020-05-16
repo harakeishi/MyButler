@@ -72,4 +72,7 @@ export default {
   font-weight: bold;
 }
 
+#nav a {
+  font-size: 1vw;
+}
 </style>
