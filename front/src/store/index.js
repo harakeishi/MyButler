@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     userinfo: '',
-    acquser: ''
+    acquser: '',
+    apiBaseURL: 'http://0.0.0.0:3000/'
   },
   mutations: {
     RegistrationToken (state, payload) {

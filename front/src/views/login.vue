@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     dologin () {
-      this.axios.post('http://0.0.0.0:3000/users/sign_in', {
+      this.axios.post(this.$store.state.apiBaseURL + 'users/sign_in', {
         name: this.id,
         pwd: this.pass
       },

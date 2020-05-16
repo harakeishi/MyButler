@@ -15,5 +15,11 @@ Rails.application.routes.draw do
       get 'index'
     end
   end
+  resources :stories do
+    collection do
+      get 'index'
+      post 'create'
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

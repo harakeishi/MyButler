@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     dologin () {
-      this.axios.post('http://0.0.0.0:3000/users/', {
+      this.axios.post(this.$store.state.apiBaseURL + 'users/', {
         name: this.id,
         pwd: this.pass
       },
@@ -46,7 +46,7 @@ export default {
             message: '登録に成功しました！',
             type: 'success'
           })
-          this.$router.push('/search')
+          this.$router.push('/login')
         })
         .catch((e) => {
           console.log(e)

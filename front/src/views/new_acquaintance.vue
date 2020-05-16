@@ -41,7 +41,7 @@ export default {
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.axios.post('http://0.0.0.0:3000/acquaintances/', {
+          this.axios.post(this.$store.state.apiBaseURL + 'acquaintances/', {
             user_id: this.ruleForm.user_id,
             name: this.ruleForm.name,
             nickname: this.ruleForm.nickname

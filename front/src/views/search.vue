@@ -54,7 +54,7 @@ export default {
   components: {
   },
   mounted () {
-    this.axios.get('http://0.0.0.0:3000/acquaintances/', {
+    this.axios.get(this.$store.state.apiBaseURL + 'acquaintances/', {
       params: {
         user_id: this.$store.state.userinfo.id
       },
@@ -77,7 +77,7 @@ export default {
       this.$router.push('/acquaintanceInfo')
     },
     send () {
-      this.axios.get('http://0.0.0.0:3000/acquaintance/search', {
+      this.axios.get(this.$store.state.apiBaseURL + 'acquaintance/search', {
         params: {
           user_id: this.$store.state.userinfo.id,
           name: this.searchtext,

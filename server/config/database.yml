@@ -14,3 +14,13 @@ development:
 test:
   <<: *default
   database: myapp_test
+
+production:
+  adapter:  mysql2
+  encoding: utf8
+  pool:     5
+  timeout:  5000
+  username: bf40b31123c2130b772b50a77ae773e0
+  password: 47fb3Rkj89iTCsWQhFVREm3
+  database: bf40b31123c2130b772b50a77ae773e0
+  host:     mysql-2.mc.lolipop.lan
