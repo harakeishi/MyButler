@@ -20,7 +20,7 @@ production:
   encoding: utf8
   pool:     5
   timeout:  5000
-  username: bf40b31123c2130b772b50a77ae773e0
+  username: 9da729a525fc3096f3c46a2dff93ea05
   password: 47fb3Rkj89iTCsWQhFVREm3
-  database: bf40b31123c2130b772b50a77ae773e0
+  database: 9da729a525fc3096f3c46a2dff93ea05
   host:     mysql-2.mc.lolipop.lan

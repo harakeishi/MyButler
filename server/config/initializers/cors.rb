@@ -17,7 +17,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     # Nuxtの開発用ローカルサーバーのアドレスを指定する。
-    origins 'http://localhost:8080'
+    origins 'https://mybutler-app.lolipop.io'
 
     resource '*',
       headers: :any,

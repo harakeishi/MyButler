@@ -3,6 +3,7 @@ class CreateStories < ActiveRecord::Migration[6.0]
     create_table :stories do |t|
       t.string :content
       t.integer :acquaintancesid
+      t.date :date
 
       t.timestamps
     end

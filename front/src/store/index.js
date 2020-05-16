@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     userinfo: '',
     acquser: '',
-    apiBaseURL: 'http://0.0.0.0:3000/'
+    apiBaseURL: 'https://mybutler.lolipop.io/' // 'http://0.0.0.0:3000/'
   },
   mutations: {
     RegistrationToken (state, payload) {
